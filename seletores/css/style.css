@@ -15,6 +15,7 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  background-attachment: fixed;
 }
 
 header .gradient-top-bottom{
@@ -116,12 +117,13 @@ header .gradient-top-bottom{
 .gradient-top-bottom form button:hover{
   font-size: 20px;
 }
-
 main{
   width: 935px;
   max-width: 97%;
   margin: auto;
   margin-top: 40px;
+  position: relative;
+  border: solid 1px transparent;
 }
 main h1{
   font-size: 44px;
@@ -129,11 +131,24 @@ main h1{
   margin-bottom: 40px;
   padding-bottom: 13px;
   border-bottom: 0.5px solid rgba(204, 204, 204,0.8);
+  position: absolute;
+  top: 0;
+  left: -600px;
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+main h1.active{
+  top: 0;
+  left: 0;
+  opacity: 1;
 }
 main p{
   text-align: justify;
   margin-bottom: 15px;
   letter-spacing: 1px;
+}
+main .paragrafo{
+ margin-top: 110px;
 }
 main ul{
   margin-top: 10px;
